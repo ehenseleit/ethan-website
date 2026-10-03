@@ -1,0 +1,38 @@
+body {
+    background-color: #f5f2eb;
+    color: #248224
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+h1 {
+    color: #244b3b;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+.game-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.game-grid li {
+    background-color: #ffffff;
+    border: 1px solid #d8ddd7;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+a {
+    color: #214b3b;
+    text-underline-offset: 4px;
+}
+
+section {
+    margin-top: 64px;
+}
