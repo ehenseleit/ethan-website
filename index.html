@@ -10,6 +10,7 @@
         >
         <link rel="stylesheet" href="styles.css">
         <script src="theme.js" defer></script>
+        <script src="card.js" defer></script>
     </head>
     <body>
     <header class="hero">
@@ -32,50 +33,110 @@
         <section id="shipped-titles">
             <h2>Shipped Titles</h2>
             <ul class="game-grid">
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/bl4-loveless.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Borderlands 4</h3>
-                    <p class="game-role">Senior Software Test Engineer</p>
-                    <p class="game-dates">2026</p>
-                    <p>
-                        Supported 2K and Gearbox Software across Borderlands 4, FL4K and the Last Resort, Amara and the Vile Shadows, and Loveless DLCs.
-                    </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/bl4-loveless.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Borderlands 4</h3>
+                            <p class="game-role">Senior Software Test Engineer</p>
+                            <p class="game-dates">2026</p>
+                            <p>
+                                Supported 2K and Gearbox Software across Borderlands 4, FL4K and the Last Resort, Amara and the Vile Shadows, and Loveless DLCs.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>Borderlands 4 was a very systems-heavy project. With so many weapons, abilities, effects, and interactions layered together, testing often meant looking beyond whether something simply worked and thinking about how different systems behaved when combined.</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </li>
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/halo-ce.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Halo: Campaign Evolved</h3>
-                    <p class="game-role">Senior Software Test Engineer - Embedded DevQA</p>
-                    <p class="game-dates">2025 - 2026</p>
-                    <p>
-                        Quality Area Owner for Campaign and Environments, coordinating testing efforts with Halo Studios Design, Art, and Lighting teams and seven international partner studios.
-                    </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/halo-ce.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Halo: Campaign Evolved</h3>
+                            <p class="game-role">Senior Software Test Engineer - Embedded DevQA</p>
+                            <p class="game-dates">2025 - 2026</p>
+                            <p>
+                                Quality Area Owner for Campaign and Environments, coordinating testing efforts with Halo Studios Design, Art, and Lighting teams and seven international partner studios.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>Halo: Campaign Evolved was my first experience seeing a project through from start to ship.</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </li>
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/apex.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Apex Legends</h3>
-                    <p class="game-role">Quality Assurance Tester</p>
-                    <p class="game-dates">2019 - 2020</p>
-                    <p>
-                        Supported Respawn with functional, regression, and exploratory testing across Xbox, PlayStation, and PC. Served on a dedicated strike team testing Loba ahead of release, identifying and verifying character and gameplay defects and providing feedback.
-                    </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/apex.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Apex Legends</h3>
+                            <p class="game-role">Quality Assurance Tester</p>
+                            <p class="game-dates">2019 - 2020</p>
+                            <p>
+                                Supported Respawn with functional, regression, and exploratory testing across Xbox, PlayStation, and PC. Served on a dedicated strike team testing Loba ahead of release, identifying and verifying character and gameplay defects and providing feedback.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>There was a very real chance I was the first Lifeline main. I was definitely one of the first Loba mains.</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </li>
                 <li>
                     <img
@@ -90,53 +151,146 @@
                     <p>
                         Supported Maxis on The Sims Mobile, focusing on stability on Android and iOS, contributing to functional testing and defect identification.
                     </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/simsmobile.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>The Sims Mobile</h3>
+                            <p class="game-role">Quality Assurance Tester</p>
+                            <p class="game-dates">2018</p>
+                            <p>
+                                Supported Maxis on The Sims Mobile, focusing on stability on Android and iOS, contributing to functional testing and defect identification.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>The Sims 4 was almost the first title I ever tested, but that turned out to be the In The Name of the Tsar expansion for Battlefield 1.</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </li>
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/madden19.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Madden 19</h3>
-                    <p class="game-role">Quality Assurance Tester</p>
-                    <p class="game-dates">2018 - 2019</p>
-                    <p>
-                        Supported EA Tiburon on Madden NFL 19 across Xbox, PlayStation, and PC. Conducted functional and regression testing, documented defects, and verified fixes throughout development.
-                    </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/madden19.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Madden 19</h3>
+                            <p class="game-role">Quality Assurance Tester</p>
+                            <p class="game-dates">2018 - 2019</p>
+                            <p>
+                                Supported EA Tiburon on Madden NFL 19 across Xbox, PlayStation, and PC. Conducted functional and regression testing, documented defects, and verified fixes throughout development.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>Once a week Madden 19 testers were shoved into what was basically a closet at EA Baton Rouge to playtest early builds of a battle royale game that would become Apex Legends.</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </li>
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/swbf2.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Star Wars: Battlefront II</h3>
-                    <p class="game-role">Quality Assurance Tester</p>
-                    <p class="game-dates">2017 - 2018</p>
-                    <p>
-                        Supported DICE on Star Wars Battlefront II with a focus on the single-player campaign across Xbox, PlayStation, and PC. Conducted functional testing, documented gameplay defects, and verified fixes during development.
-                    </p>
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/bf1.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Star Wars: Battlefront II</h3>
+                            <p class="game-role">Quality Assurance Tester</p>
+                            <p class="game-dates">2017 - 2018</p>
+                            <p>
+                                Supported DICE on Star Wars Battlefront II with a focus on the single-player campaign across Xbox, PlayStation, and PC. Conducted functional testing, documented gameplay defects, and verified fixes during development.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <img
-                        class="game-art"
-                        src="assets/images/bf1.jpg"
-                        alt=""
-                        >
-                    <div class="game-content">
-                    <h3>Battlefield 1</h3>
-                    <p class="game-role">Quality Assurance Tester</p>
-                    <p class="game-dates">2017</p>
-                    <p>
-                        Supported DICE on Battlefield 1: In the Name of the Tsar across Xbox, PlayStation, and PC. Contributed to functional and regression testing of expansion content, identifying and documenting defects throughout development.
-                    </p>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>Alongside testing the launch campaign, the team I was on also tested the campaign DLC and the first set of maps released for The Last Jedi. Because of that I was able to see stills of the movie before it came out!</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
                     </div>
-                </li>   
+                </div>
+                </li> 
+                <li class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <img
+                                class="game-art"
+                                src="assets/images/bf1.jpg"
+                                alt=""
+                            >
+                    
+                        <div class="game-content">
+                            <h3>Battlefield 1</h3>
+                            <p class="game-role">Quality Assurance Tester</p>
+                            <p class="game-dates">2017</p>
+                            <p>
+                                Supported DICE on Battlefield 1: In the Name of the Tsar across Xbox, PlayStation, and PC. Contributed to functional and regression testing of expansion content, identifying and documenting defects throughout development.
+                            </p>
+
+                            <p class="flip-hint">Click or tap for behind the credit</p>
+                            <button class="flip-open" type="button" disabled>
+                                Behind the credit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-back" hidden>
+                        <div class="game-content">
+                            <p>Battlefield 1 was the first game I worked on!</p>
+
+                            <p class="flip-hint">Click or tap to return</p>
+                            <button class="flip-close" type="button" disabled>
+                                Back to overview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </li>    
             </ul>
         </section>
         <section id="experience">
