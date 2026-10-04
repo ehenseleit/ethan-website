@@ -234,3 +234,64 @@ section {
         box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
     }
 }
+
+.game-grid li.flip-card {
+    perspective: 1200px;
+    background: transparent;
+    border: 0;
+    overflow: visible;
+}
+
+.flip-card-inner {
+    display: grid;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    grid-area: 1 /1;
+    min-width: 0;
+    backface-visibility: hidden;
+    background-color: var(--surface-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-open,
+.flip-close {
+    padding: 10px 16px;
+    font: inherit;
+    color: var(--button-text);
+    background-color: var(--button-background);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.flip-open:disabled,
+.flip-close:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.flip-open:focus-visible,
+.flip-close:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .flip-card-inner {
+        transition: transform 500ms ease;
+    }
+}
