@@ -89,3 +89,89 @@ section {
 .game-content {
     padding: 24px
 }
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 32px;
+}
+
+.experience-grid h3 {
+    color: #214b3b;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.experience-grid p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.hero-intro {
+    max-width: 65ch;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+}
+
+#contact {
+    border-top: 1px solid #d8ddd7;
+    padding-top: 32px;
+}
+
+#contact p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+    max-width: 600px;
+    margin-top: 32px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: #242824;
+    background-color: #ffffff;
+    border: 1px solid #686868;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    justify-self: start;
+    padding: 12px 24px;
+    font: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #214b3b;
+    border: 0;
+    border-radius: 4px;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible
+.contact-form button:focus-visible {
+    outline: 3px solid #214b3b;
+    outline-offset: 3px;
+}
