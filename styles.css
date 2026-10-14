@@ -409,17 +409,6 @@ section {
     opacity: 0.20;
 }
 
-@media (max-width: 767px) {
-    .extra-hint {
-        display: none;
-    }
-
-    .debug-toggle {
-        position: static;
-        margin: 12px 0 0 auto;
-    }
-}
-
 .debug-toggle {
     display: block;
     position: absolute;
@@ -488,4 +477,15 @@ body.debug-mode .flip-card {
 .debug-panel button {
     font: inherit;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .extra-hint {
+        display: none;
+    }
+
+    .debug-toggle {
+        position: static;
+        margin: 12px 0 0 auto;
+    }
 }
