@@ -6,6 +6,9 @@ const keySequence = [
     "b", "a"
 ];
 
+const extraSound = new Audio("assets/audio/sequence.mp3");
+extraSound.volume = 0.25;
+
 let recentKeys = [];
 
 let messageTimer;
@@ -15,6 +18,11 @@ function activateSecret() {
 
     message.textContent = "Secret unlocked!";
     playEffect();
+    extraSound.currentTime = 0;
+
+    extraSound.play().catch(() => {
+        console.log("Sound playback was unavailable.");
+    });
 
     clearTimeout(messageTimer);
 
