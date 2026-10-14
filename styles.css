@@ -413,6 +413,11 @@ section {
     .extra-hint {
         display: none;
     }
+
+    .debug-toggle {
+        position: static;
+        margin: 12px 0 0 auto;
+    }
 }
 
 .debug-toggle {
