@@ -342,3 +342,58 @@ section {
     outline: 3px solid var(--accent-color);
     outline-offset: 3px;
 }
+
+#extra-message {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+
+    max-width: calc(100vw - 48px);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px 18px;
+
+    background: var(--surface-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    pointer-events: none;
+}
+
+#extra-message:empty {
+    opacity: 0;
+}
+
+/* More AI code */
+
+.extra-piece {
+    position: fixed;
+    top: -20px;
+    left: 50%;
+    width: 10px;
+    height: 16px;
+    background: #c49a45;
+    z-index: 999;
+    pointer-events: none;
+}
+
+@keyframes extra-fall {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    to {
+        transform: translate(var(--drift, 0px), 110vh)
+           rotate(var(--spin, 720deg));
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .extra-piece {
+        animation: extra-fall 3s linear forwards;
+    }
+}
+
+/* End AI code */
