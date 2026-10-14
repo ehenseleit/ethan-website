@@ -22,10 +22,18 @@ document.querySelectorAll(".flip-card").forEach((card) => {
 
     openButton.addEventListener("click", () => {
         flipCard(true);
+
+        if (typeof navigator.vibrate === "function") {
+            navigator.vibrate(10);
+        }
     });
 
     closeButton.addEventListener("click", () => {
         flipCard(false);
+
+        if (typeof navigator.vibrate === "function") {
+            navigator.vibrate(10);
+        }
     });
 
     card.addEventListener("keydown", (event) => {
