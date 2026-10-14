@@ -332,6 +332,7 @@ section {
     color: var(--muted-text);
     font-size: 14px;
     text-align: center;
+    position: relative;
 }
 
 .site-footer a {
@@ -406,4 +407,74 @@ section {
     text-align: center;
     color: var(--muted-text);
     opacity: 0.20;
+}
+
+.debug-toggle {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 8px 14px;
+    border: 0;
+    background: transparent;
+    color: var(--muted-text);
+    font-family: Georgia, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.debug-toggle[hidden] {
+    display: none;
+}
+
+.debug-toggle:hover {
+    color: var(--accent-color);
+}
+
+.debug-toggle:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+body.debug-mode .hero,
+body.debug-mode main > section,
+body.debug-mode .site-footer {
+    outline: 1px dashed var(--accent-color);
+    outline-offset: 4px;
+}
+
+body.debug-mode .flip-card {
+    outline: 1px dashed #c49a45;
+    outline-offset: 2px;
+}
+
+.debug-toggle[aria-pressed="true"] {
+    color: var(--accent-color);
+    background: var(--surface-background);
+}
+
+.debug-panel {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1001;
+    max-width: calc(100vw - 32px);
+    box-sizing: border-box;
+    padding: 16px;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    background: var(--surface-background);
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.debug-panel p {
+    margin: 8px 0;
+}
+
+.debug-panel button {
+    font: inherit;
+    cursor: pointer;
 }

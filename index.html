@@ -358,10 +358,29 @@
             Designed and built by Ethan Henseleit, 2026.
             <a href="https://github.com/ehenseleit/ethan-website">View source on GitHub.</a>
         </p>
+
+        <button
+            type="button"
+            id="debug-toggle"
+            class="debug-toggle"
+            aria-label="Toggle debug mode"
+            aria-pressed="false"
+            hidden
+        >
+            π
+        </button>
+
         <p class="extra-hint" aria-label="Up, up, down, down…">
-    ↑ ↑ ↓ ↓ …
-    </p>
+            ↑ ↑ ↓ ↓ …
+        </p>
     </footer>
-    <p id="extra-message" role="staus"></p>
+    <p id="extra-message" role="status"></p>
+
+    <aside id="debug-panel" class="debug-panel" hidden aria-label="Debug tools">
+    <strong>debug mode</strong>
+    <p id="debug-viewport"></p>
+    <button type="button" id="debug-exit">Exit debug mode</button>
+    </aside>
+
     </body>
 </html>

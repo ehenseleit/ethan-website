@@ -95,4 +95,43 @@ function playEffect() {
 }
 }
 
+const debugToggle = document.querySelector("#debug-toggle");
+const debugPanel = document.querySelector("#debug-panel");
+const debugViewport = document.querySelector("#debug-viewport");
+const debugExit = document.querySelector("#debug-exit");
+
+function updateDebugViewport() {
+    debugViewport.textContent =
+        "Viewport: " + window.innerWidth + " × " + window.innerHeight + " px";
+}
+
+function toggleDebugMode() {
+    const isActive = document.body.classList.toggle("debug-mode");
+
+    debugToggle.setAttribute("aria-pressed", String(isActive));
+    debugPanel.hidden = !isActive;
+    updateDebugViewport();
+}
+
+debugToggle.addEventListener("click", toggleDebugMode);
+debugToggle.hidden = false;
+
+debugExit.addEventListener("click", () => {
+    toggleDebugMode();
+    debugToggle.focus({ preventScroll: true });
+});
+
+window.addEventListener("resize", updateDebugViewport);
+
+document.addEventListener("keydown", (event) => {
+    if (
+        event.key === "Escape" &&
+        document.body.classList.contains("debug-mode") &&
+        !event.target.closest(".flip-card")
+    ) {
+        toggleDebugMode();
+        debugToggle.focus({ preventScroll: true });
+    }
+});
+
 //AI helped a lot with this. I am NOT good at Javascript yet. I did go through this line by line.
