@@ -496,7 +496,7 @@ body.debug-mode .flip-card {
     display: none;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 2000px) {
     .bounds-marker:not([hidden]) {
         display: block;
         position: absolute;
