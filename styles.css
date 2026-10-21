@@ -28,6 +28,7 @@
 }
 
 body {
+    position: relative;
     background-color: var(--page-background);
     color: var(--text-color);
     font-family: Arial, sans-serif;
@@ -498,9 +499,11 @@ body.debug-mode .flip-card {
 @media (min-width: 1800px) {
     .bounds-marker:not([hidden]) {
         display: block;
-        position: fixed;
-        right: 32px;
+        position: absolute;
         top: 50%;
+        left: calc(100% + 48px);
+        right: auto;
+        width: 150px;
         transform: translateY(-50%);
         max-width: 150px;
         padding: 12px;
