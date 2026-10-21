@@ -141,7 +141,7 @@ const boundsMarker = document.querySelector("#bounds-marker");
 boundsMarker.addEventListener("click", () => {
     const message = document.querySelector("#extra-message");
 
-    message.textContent = "You weren't supposed to test this far out.";
+    message.textContent = "Here be dragons.";
 
     clearTimeout(messageTimer);
 
