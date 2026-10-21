@@ -501,8 +501,8 @@ body.debug-mode .flip-card {
         display: block;
         position: absolute;
         top: 50%;
-        left: calc(100% + 48px);
-        right: auto;
+        left: auto;
+        right: calc(50% - 50vw + 32px);
         width: 150px;
         transform: translateY(-50%);
         max-width: 150px;
