@@ -134,4 +134,22 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+// Ultrawide
+
+const boundsMarker = document.querySelector("#bounds-marker");
+
+boundsMarker.addEventListener("click", () => {
+    const message = document.querySelector("#extra-message");
+
+    message.textContent = "You weren't supposed to test this far out.";
+
+    clearTimeout(messageTimer);
+
+    messageTimer = setTimeout(() => {
+        message.textContent = "";
+    }, 4000);
+});
+
+boundsMarker.hidden = false;
+
 //AI helped a lot with this. I am NOT good at Javascript yet. I did go through this line by line.

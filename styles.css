@@ -489,3 +489,38 @@ body.debug-mode .flip-card {
         margin: 12px 0 0 auto;
     }
 }
+
+/* Ultrawide easter egg since I got one at work temporarily */
+.bounds-marker {
+    display: none;
+}
+
+@media (min-width: 1800px) {
+    .bounds-marker:not([hidden]) {
+        display: block;
+        position: fixed;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 150px;
+        padding: 12px;
+        border: 1px dashed var(--border-color);
+        border-radius: 4px;
+        background: transparent;
+        color: var(--muted-text);
+        font-family: monospace;
+        font-size: 11px;
+        line-height: 1.5;
+        cursor: pointer;
+    }
+
+    .bounds-marker:hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+    .bounds-marker:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 4px;
+    }
+}
